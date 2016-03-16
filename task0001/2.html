@@ -4,128 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>ife-2</title>
-    <style>
-    body {
-        background: #dedede;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: '微软雅黑';
-    }
-    
-    #top-nav {
-        width: 100%;
-        height: 60px;
-        background: #333333;
-    }
-    
-    #top-nav #wrapper_right {
-        float: right;
-        padding: 20px;
-    }
-    
-    #top-nav .top-nav-l {
-        margin-left: 25px;
-        float: left;
-    }
-    
-    #top-nav .top-nav-l a {
-        color: #fff;
-        font-size: 13px;
-    }
-    
-    .logo {
-        margin-left: 20px;
-        padding: 10px;
-    }
-    
-    .article {
-        background: #dedede;
-    }
-    
-    .article-wrap {
-        background: #fff !important;
-        width: 90%;
-        margin: 32px auto;
-        box-shadow: 3px 1px 5px #333333;
-    }
-    
-    p {
-        text-indent: 2em;
-    }
-    
-    .article-content {
-        padding: 25px;
-    }
-    
-    .article-content dd {
-        margin: 15px 0 0 40px;
-        border: 1px solid #ccc;
-        display: block;
-        width: 300px;
-        text-align: center;
-    }
-    
-    .article-u {
-        list-style: none;
-        margin-left: 20px;
-    }
-    
-    .article-content thead {
-        background: #333;
-        color: #fff;
-    }
-    
-    .article-content tfoot {
-        background: #ccc;
-    }
-    
-    .article-content table,
-    tr,
-    td {
-        border: 1px solid #ccc;
-        border-collapse: collapse;
-        padding: 5px;
-    }
-    
-    .rank-o {
-        margin-left: 20px;
-        padding: 20px;
-    }
-    
-    .sideBar {
-        margin: 20px;
-        border-left: 5px solid #ccc;
-        padding: 3px;
-    }
-    
-    .form-detail {
-        margin-left: 300px;
-    }
-    
-    .form-group {
-        margin-top: 15px;
-    }
-    
-    .mes-submit {
-        width: 95%;
-        margin: 0 auto;
-        background: #3355D0;
-        color: #fff;
-        font-size: 15px;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    </style>
+    <link rel="stylesheet" href="css/2.css">
 </head>
 
 <body>
     <nav id="top-nav">
         <span class="logo">
-    		<img src="./img/hz_icon.png" alt="my_logo" width="50">
-    	</span>
+            <img src="./img/hz_icon.png" alt="my_logo" width="50">
+        </span>
         <div id="wrapper_right">
             <ul>
                 <li class="top-nav-l"><a href="#">导航链接一</a></li>
@@ -250,52 +136,53 @@
             <div class="article-content">
                 <h2 class="sideBar">这里以后是一个侧栏，这是侧栏的标题</h2>
                 <form action="#" class="" id="form-mes">
-                   	<div class="form-detail">
-                   		 <p class="form-group">
-                        <label for="ema">请输入邮箱地址</label>
-                        <input type="email" id="ema" placeholder="这是一个文本输入框">
-                    </p>
-                    <p class="form-group">邮箱地址请按要求格式输入</p>
+                    <div class="form-detail">
+                        <p class="form-group">
+                            <label for="ema">请输入邮箱地址</label>
+                            <input type="email" id="ema" placeholder="这是一个文本输入框">
+                        </p>
+                        <p class="form-group">邮箱地址请按要求格式输入</p>
+                        <p class="form-group">
+                            <label for="pass">请输入密码</label>
+                            <input type="password" id="pass" placeholder="这是一个文本输入框">
+                        </p>
+                        <p class="form-group">
+                            <label for="repass">请重复输入密码</label>
+                            <input type="password" id="repass" placeholder="这是一个文本输入框">
+                        </p>
+                        <p class="form-group">密码请为6-16位英文数字</p>
+                        <p class="form-group">性别:
+                            <input type="radio" name="sex" id="male" value="male">
+                            <label for="male">男</label>
+                            <input type="radio" name="sex" id="female" value="female">
+                            <label for="female">女</label>
+                            <p class="form-group">
+                                城市：
+                                <select name="live-city" id="">
+                                    <option value="广州">广州</option>
+                                    <option value="深圳">深圳</option>
+                                    <option value="北京" selected>北京</option>
+                                    <option value="上海">上海</option>
+                                </select>
+                            </p>
+                            <p class="form-group">
+                                爱好：
+                                <input type="checkbox" name="sport" id="sport" checkded>
+                                <label for="sport">运动</label>
+                                <input type="checkbox" name="art" id="art">
+                                <label for="art">艺术</label>
+                                <input type="checkbox" name="science" id="science">
+                                <label for="science">科学</label>
+                            </p>
+                            <p class="form-group">
+                                <label for="prs-desc">个人描述</label>
+                                <textarea id="prs-desc" placeholder="这是一个多行多选框"></textarea>
+                            </p>
+                        </p>
+                    </div>
                     <p class="form-group">
-                        <label for="pass">请输入密码</label>
-                        <input type="password" id="pass" placeholder="这是一个文本输入框">
-                        <label for="repass">请重复输入密码</label>
-                        <input type="password" id="repass" placeholder="这是一个文本输入框">
+                        <input class="mes-submit" type="submit" value="确认提交">
                     </p>
-                    <p class="form-group">密码请为6-16位英文数字</p>
-                    <p class="form-group">性别:
-                        <input type="radio" name="sex" id="male" value="male">
-                        <label for="male">男</label>
-                        <input type="radio" name="sex" id="female" value="female">
-                        <label for="female">女</label>
-                        <p class="form-group">
-                            城市：
-                            <select name="live-city" id="">
-                                <option value="广州">广州</option>
-                                <option value="深圳">深圳</option>
-                                <option value="北京" selected>北京</option>
-                                <option value="上海">上海</option>
-                            </select>
-                        </p>
-                        <p class="form-group">
-                            爱好：
-                            <input type="checkbox" name="sport" id="sport" checkded>
-                            <label for="sport">运动</label>
-                            <input type="checkbox" name="art" id="art">
-                            <label for="art">艺术</label>
-                            <input type="checkbox" name="science" id="science">
-                            <label for="science">科学</label>
-                        </p>
-                        <p class="form-group">
-                            <label for="prs-desc">个人描述</label>
-                            <textarea id="prs-desc" placeholder="这是一个多行多选框"></textarea>
-                        </p>
-                        
-                    </p>
-                   	</div>
-                   	<p class="form-group">
-                            <input class="mes-submit" type="submit" value="确认提交">
-                        </p>
                 </form>
             </div>
         </div>
