@@ -1,0 +1,30 @@
+@charset "utf-8";
+/*定义变量*/
+
+$primary-color:#333;
+//变量调用
+body{
+    color:$primary-color;
+}
+$side : left;
+.rounded {
+    border-#{$side}-radius:5px
+}
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            margin: 10px;
+        }
+    }
+}
+p{
+    border:{
+        color:red;
+    }
+}
+a{
+    &:hover{color:red}
+}

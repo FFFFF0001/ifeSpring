@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*780px以下的设备*/
+@media only screen and (max-width: 780px) {
+	
+}
+/*780px以上的设备*/
+@media only screen and (min-width: 780px) {
+	
+}
