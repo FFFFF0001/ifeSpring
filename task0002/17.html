@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		#aqi-chart-wrap{
+			margin-top: 10px;
+			padding:10px 50px;
+			height: 500px;
+			position: relative;
+			border:1px solid #ccc;
+			border-radius: 30px;
+		}
+		#aqi-chart-wrap:before{
+			content: '';
+			width: 0;
+			height: 100%;
+			background-color: #fff;
+			display: inline-block;
+		}
+		.eachData{
+			display: inline-block;
+			opacity: 0.7;
+			transition: all .4s ease;
+			padding: 3px;
+			box-sizing: border-box;
+		}
+		.eachData:hover{
+			opacity: 1;
+		}
+		.inside{
+		}
+	</style>
+</head>
+<body>
+	<fieldset id="form-gra-time">
+    <legend>请选择日期粒度：</legend>
+    <label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
+    <label>周<input name="gra-time" value="week" type="radio"></label>
+    <label>月<input name="gra-time" value="month" type="radio"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>请选择查看的城市：</legend>
+    <select id="city-select">
+      <option>北京</option>
+    </select>
+  </fieldset>
+
+  <div id="aqi-chart-wrap">
+  </div>
+	<script src="js/5.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
