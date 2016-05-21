@@ -1,17 +1,15 @@
 [
-  //调查问卷 research
   {
     "researchID" :  1,
     "researchTitle" : "关于XXX的调查问卷",
     "deadline" : "2016-3-24",
-    "state" : 1, // 1.正在进行  2.未发布  3.已经结束
+    "state" : 1,
     "description" : "测试测试测试测试测试测试测试测试测试测试测试测试测试测试",
     "questionTeam" : [
-      //题目元素
       {
         "titleDesc":"题目描述",
-        "isMust" : true,  //必填，布尔类型
-        "questType" :  1       , //单选 多选 填空
+        "isMust" : true,
+        "questType" :  1,
         "questOption" :  [
           "18岁以下",
           "18-25",
@@ -31,7 +29,4 @@
     ]
 
   }
-
-
-
 ]

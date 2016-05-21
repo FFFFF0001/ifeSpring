@@ -9,6 +9,8 @@ requirejs.config({
     }
 });
 require(['jquery','editCommon','underscore'],function ($,common) {
+    //当没有ls时，伪造数据
+    common.initLg();
 
     var eachWrapper = '.each-question-wrap';
     //点添加问题
@@ -73,16 +75,42 @@ require(['jquery','editCommon','underscore'],function ($,common) {
         common.delete();
     /*save paper*/
     $(document).on("click",'#save',function () {
-        $.getJSON('./config.json',
-            function (configObj) {
-                configObj.researchID=common.getResearchId();
-                configObj.researchTitle=$("#paper-title").text();
-                configObj.deadline = $("#end-date").val();
-                configObj.state = 1;
-                configObj.description = "我是描述";
-                configObj.questionTeam = common.getQuestionArr();
-                var paperJson = JSON.stringify(configObj);
-                window.localStorage.setItem('paperMsg', paperJson);
-        });
-    })
+
+        var is = confirm('你确定保存吗');
+        if(!is) return false;
+            var lgObj = window.localStorage,
+                papers = lgObj.getItem('paperMsg');
+
+        var newObj={};
+        var paperJson;
+
+        function getBaseInfo() {
+            newObj.researchTitle=$("#paper-title").text();
+            newObj.deadline = $("#end-date").val();
+            newObj.state = 1;
+            newObj.description = "我是描述";
+            newObj.questionTeam = common.getQuestionArr();
+        }
+        if(papers==null) {
+            var arr = [];
+            newObj.researchID=1;
+            getBaseInfo();
+
+            arr.push(newObj);
+
+            paperJson = JSON.stringify(arr);
+        }else{
+            var beforeLs = JSON.parse(papers);
+
+            newObj.researchID=common.getResearchId();
+            getBaseInfo();
+
+            beforeLs.push(newObj);
+
+            paperJson = JSON.stringify(beforeLs);
+        }
+
+        lgObj.setItem('paperMsg', paperJson);
+
+    });
 });

@@ -65,7 +65,7 @@ define(['jquery'], function ($) {
             $(document).on("click",".add-textrea",function () {
                 if(ltTen()) {
                     addBtn.before("<div class='each-question-wrap'>" +
-                        "<p class='q-top'>Q"+nextIndex()+" 文本题</p>" +
+                        "<p class='q-top'>Q"+nextIndex()+" <span class='xx-ct'>文本题</span></p>" +
                         "<input type='hidden' name='questType' value='3'>"+
                             "<span id='isMustWrapper'>"+
                                 "<input type='checkbox' id='isMust'/><label for='isMust'>是否必填</label>"+
@@ -124,7 +124,7 @@ define(['jquery'], function ($) {
         },
         getQuestionArr:function () {
             var questions = [];
-            $(eachWrapper).each(function (index, element) {
+            $('.each-question-wrap').each(function (index, element) {
                 var obj = {},
                     options = [];
                 var ths = $(element);
@@ -132,9 +132,9 @@ define(['jquery'], function ($) {
                 obj.titleDesc = ths.find('.q-top .xx-ct').text();
                 obj.questType = ths.find('[name=questType]').val();
                 if(ths.find(".text-input").length!=0) {//文本题
-                    options.push(ths.find('.text-input').text());
+                    options.push(ths.find('.text-input').val());
                     //set json's isMust
-                    if(ths.find('#isMust').attr('checked')) {
+                    if(ths.find('#isMust').is(':checked')) {
                         obj.isMust=true;
                     }else{
                         obj.isMust=false;
@@ -144,7 +144,7 @@ define(['jquery'], function ($) {
                     ths.find('[class^=each-option]')
                         .each(function (optInd,optEle) {
                             var optThs = $(optEle);
-                            var current = optThs.find('xx-ct').text();
+                            var current = optThs.find('.xx-ct').text();
                             options.push(current);
                         });
                     obj.isMust=true;
@@ -164,7 +164,14 @@ define(['jquery'], function ($) {
                 return 1;
             }else{
                 var afterParse = JSON.parse(val);
-                return afterParse.length+1;
+                var max = afterParse[afterParse.length-1].researchID;
+                return max+1;
+            }
+        },
+        initLg:function () {
+            var currentMsg = window.localStorage.getItem('paperMsg');
+            if(currentMsg==null) {
+                window.localStorage.setItem('paperMsg',JSON.stringify([{"researchID":1,"researchTitle":"title","deadline":"","state":1,"description":"我是描述","questionTeam":[{"titleDesc":"多选题","questType":"2","isMust":true,"questOption":["选项一","选项二","选项三"],"answerNum":[]},{"titleDesc":"单选题","questType":"1","isMust":true,"questOption":["选项一","选项二","选项三"],"answerNum":[]}]}]));
             }
         }
     }
