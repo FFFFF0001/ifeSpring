@@ -109,6 +109,7 @@ body {
   -moz-box-shadow: 5px 2px 10px #005;
   box-shadow: 5px 2px 10px #005; }
   #middle-content h3 {
+    outline: none;
     text-align: center;
     padding: 15px 0px;
     border-bottom: 3px solid #CCC;
@@ -193,6 +194,11 @@ body {
   .each-question-wrap:hover {
     background-color: #fef1e8; }
   .each-question-wrap .text-input {
+    width: 70%;
+    border-radius: 15px;
+    height: 80px;
+    outline: none;
+    display: inline-block;
     font-size: 15px;
     margin: 20px 0 0 40px;
     padding: 15px; }
@@ -227,7 +233,7 @@ body {
   font-size: 21px;
   position: absolute;
   left: -5%;
-  top: -5px;
+  top: -8px;
   color: red; }
 
 .bottom-handler {
@@ -247,13 +253,24 @@ body {
   font-size: 15px; }
 
 .option-ip {
-  width: 80%; }
+  width: 80%;
+  outline: none; }
 
 #add-question-op {
+  margin-top: 10px;
   border: 1px dashed rebeccapurple;
   cursor: pointer;
   text-align: center;
   color: rebeccapurple;
   width: 80%; }
+
+span#isMustWrapper {
+  position: absolute;
+  top: 10px;
+  right: 5%; }
+  span#isMustWrapper label {
+    font-size: 13px; }
+  span#isMustWrapper input#isMust {
+    vertical-align: middle; }
 
 /*# sourceMappingURL=edit.css.map */

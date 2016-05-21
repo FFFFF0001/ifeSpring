@@ -4,27 +4,16 @@
  */
 requirejs.config({
     paths: {
-        "jquery": ["http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min"]
+        "jquery": ["http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min"],
+        'underscore':"../node_modules/underscore/underscore-min"
     }
 });
-require(['jquery','editCommon'],function ($,common) {
+require(['jquery','editCommon','underscore'],function ($,common) {
 
     var eachWrapper = '.each-question-wrap';
     //点添加问题
     $(".add-btn").bind('click', function () {
         $(".question-kind").fadeIn();
-    });
-    //点击标题
-    $(document).on('click', '.edit-block h3', function () {
-        var ct = $(this).html();
-        $(this).replaceWith("<input type='text' name='paper_title'" +
-            " class='title-input' value=" + ct + " />");
-    });
-    //失去焦点变为原来的标题
-    $(document).on('blur',"[name=paper_title]",function () {
-        var ths = $(this);
-        var ct = ths.val();
-        $(this).replaceWith("<h3>" + ct + "</h3>");
     });
     //上移下移等按钮的显示
     $(document).on('mouseenter', eachWrapper,function () {
@@ -32,7 +21,7 @@ require(['jquery','editCommon'],function ($,common) {
     }).on('mouseleave', eachWrapper,function () {
         $(this).find('.bottom-handler').stop().fadeOut();
     });
-    //叉叉
+    //hover cha~
     $(document).on('mouseenter',eachWrapper+' p',function () {
         $(this).find('.cha').fadeIn();
     }).on('mouseleave',eachWrapper+' p',function () {
@@ -40,8 +29,9 @@ require(['jquery','editCommon'],function ($,common) {
     });
     //remove cha<p
     $(document).on('click', '.cha', function () {
-        var len = $(this).parents('p[class^=each-option]').siblings().length;
-        if(len-1==4) {
+        var len = $(this).parents('.each-question-wrap')
+            .find('[class^=each-option]').length;
+        if(len==4) {
             $(this).parents('.each-question-wrap')
                 .find('.bottom-handler')
                 .before("<p id='add-question-op'>+</p>");
@@ -81,4 +71,18 @@ require(['jquery','editCommon'],function ($,common) {
         common.Down();
         common.Repeat();
         common.delete();
+    /*save paper*/
+    $(document).on("click",'#save',function () {
+        $.getJSON('./config.json',
+            function (configObj) {
+                configObj.researchID=common.getResearchId();
+                configObj.researchTitle=$("#paper-title").text();
+                configObj.deadline = $("#end-date").val();
+                configObj.state = 1;
+                configObj.description = "我是描述";
+                configObj.questionTeam = common.getQuestionArr();
+                var paperJson = JSON.stringify(configObj);
+                window.localStorage.setItem('paperMsg', paperJson);
+        });
+    })
 });

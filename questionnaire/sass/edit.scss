@@ -124,6 +124,7 @@ body{
   -moz-box-shadow:  5px 2px 10px #005;
   box-shadow:  5px 2px 10px #005;
   h3 {
+    outline: none;
     text-align: center;
     padding:15px 0px;
     border-bottom:3px solid #CCC;
@@ -225,6 +226,11 @@ body{
   }
   padding:20px;
   .text-input{
+    width: 70%;
+    border-radius: 15px;
+    height: 80px;
+    outline:none;
+    display: inline-block;
     font-size:15px;
     margin: 20px 0 0 40px;
     padding: 15px;
@@ -266,7 +272,7 @@ body{
   font-size:21px;
   position: absolute;
   left: -5%;
-  top: -5px;
+  top: -8px;
   color: red;
 }
 .bottom-handler{
@@ -288,11 +294,24 @@ body{
 }
 .option-ip{
   width: 80%;
+  outline:none;
 }
-#add-question-op{
-  border:1px dashed rebeccapurple;
+#add-question-op {
+  margin-top: 10px;
+  border: 1px dashed rebeccapurple;
   cursor: pointer;
   text-align: center;
-  color:rebeccapurple;
+  color: rebeccapurple;
   width: 80%;
+}
+span#isMustWrapper{
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  label{
+    font-size:13px;
+  }
+  input#isMust{
+    vertical-align: middle;
+  }
 }
