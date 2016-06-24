@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', Helvetica, Arial, sans-serif; }
+
+header {
+  padding: 0.625rem 0;
+  background-color: #91D4DA;
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  position: relative; }
+  header .h-back {
+    position: absolute;
+    font-size: 0.9375rem;
+    left: 0.625rem;
+    top: 0.8125rem; }
+
+nav ul > li.each-n {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  text-align: center;
+  font-size: 1.0625rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.625rem 0;
+  color: #676767; }
+
+nav ul > li.each-n:nth-child(2) {
+  border-bottom: 3px solid #91D4DA; }
+
+/*# sourceMappingURL=11.css.map */
