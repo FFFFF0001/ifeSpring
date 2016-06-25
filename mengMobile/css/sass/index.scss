@@ -1,0 +1,228 @@
+$basicFont:16px;
+$fontColor:#999A9D;
+@function pxToRem($px){
+  @return $px/$basicFont*1rem;
+}
+@mixin verticalPd($px:10px){
+  padding-top: $px;
+  padding-bottom:$px;
+}
+@mixin horizontalPd($px:10px){
+  padding-left: $px;
+  padding-right:$px;
+}
+@mixin setFontColor($color:$fontColor){
+  color: $fontColor;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft YaHei';
+  text-decoration: none;}
+.swiper-slide a{
+  display: inline-block;
+}
+.swiper-slide img {
+  display: inline-block;
+  height: pxToRem(200px);
+  width: 100%;
+}
+#pop-wrapper {
+  @include verticalPd();
+  .pop-title {
+    font-size: pxToRem(18px);
+    text-align: center;
+    @include verticalPd(30px);
+    color: #6B6B6C;
+  }
+  .pop-slider-wrap{
+    position: relative;
+    height: pxToRem(250px);
+    overflow: hidden;
+  }
+  .overflow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10000px;
+    overflow: auto;
+  }
+}
+.pop-thgs{
+  box-shadow: 2px 1px 2px #FEF9F8;
+  margin-left:pxToRem(10px);
+  width: pxToRem(180px);
+
+  float: left;
+  .thgs-pic{
+    padding-bottom:pxToRem(5px);
+  }
+  .thgs-pic img{
+    display: inline-block;
+    width: 100%;
+    height:pxToRem(130px);
+  }
+  p.thgs-desc {
+    font-size: pxToRem(15px);
+    padding: pxToRem(5px) 0 pxToRem(5px) pxToRem(15px);
+    color: #C7C7C7;
+  }
+  p.thgs-place {
+    padding: pxToRem(5px) 0 pxToRem(5px) pxToRem(15px);
+    font-size: pxToRem(12px);
+    color: #E7E7E7;
+  }
+  p.thgs-msg {
+    @include horizontalPd(15px);
+    line-height: pxToRem(35px);
+    @include verticalPd(10px);
+    .head-icon {
+      border-radius: 50%;
+      img {
+        display: inline-block;
+      }
+    }
+    .name {
+      @include setFontColor();
+      font-size: pxToRem(13px);
+      vertical-align: top;
+      display: inline-block;
+    }
+    .price {
+      float: right;
+      font-size: pxToRem(22px);
+      font-family: 'Arial';
+      @include setFontColor();
+      em {
+        font-style: normal;
+        font-size: pxToRem(12px);
+      }
+    }
+  }
+}
+.pop-more {
+  text-align: center;
+  @include verticalPd(25px);
+  @include setFontColor();
+  font-size: pxToRem(14px);
+}
+.mid-show{
+  margin-bottom:10px;
+  display: inline-block;
+  width: 100%;
+}
+#shop-container{
+  text-align: center;
+}
+#shop-container h3 {
+  font-size: pxToRem(18px);
+  font-weight:normal;
+  @include verticalPd(15px);
+  @include setFontColor('#808082');
+  text-align: center;
+}
+.shop-detail{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border:1px solid #EAEAEA;
+  width: 31%;
+  margin-left: 5px;
+  float: left;
+}
+.detail-ig{
+  width: 100%;
+}
+.shop-desc {
+  @include setFontColor();
+  font-size: pxToRem(10px);
+  text-align: center;
+  @include verticalPd(15px);
+  em {
+    font-style: normal;
+    color: #FFA9C2;
+  }
+}
+#shopping-cart {
+  clear: both;
+  display: inline-block;
+  @include setFontColor();
+  border: 1px solid #EAEAEA;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;;
+  @include horizontalPd(40px);
+  @include verticalPd(10px);
+  margin: 40px 0;
+  em{
+    font-style: normal;
+    color:#000;
+  }
+}
+.some-goods-wrapper {
+  padding: 15px;
+}
+.goods img{
+  display: inline-block;
+  width: 100%;
+  padding-bottom:15px;
+}
+.top-block {
+  text-align: center;
+  border-bottom:1px solid #eee;
+  box-sizing: border-box;
+  .title {
+    font-size: pxToRem(17px);
+  }
+  .desc {
+    @include setFontColor();
+    padding-top:15px;
+    font-size: pxToRem(11px);
+  }
+  .price {
+    font-size: pxToRem(22px);
+    @include verticalPd(20px);
+    em{
+      font-style: normal;
+      font-size: pxToRem(12px);
+    }
+  }
+}
+.bottom-block{
+  &>div{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  padding:20px 10px;
+  .head-icon {
+    width: pxToRem(50px);
+    height: pxToRem(50px);
+    display: inline-block;
+    img{
+      width: 100%;
+    }
+  }
+
+  .usrname {
+    @include setFontColor();
+    font-size: pxToRem(14px);
+
+  }
+  .level,.year {
+    padding: 3px;
+    font-size: pxToRem(11px);
+    border:1px solid #efefef;
+    margin-right: 5px;
+  }
+
+  .btn-book {
+    display: inline-block;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #F8869D;
+    @include verticalPd(12px);
+    @include horizontalPd(30px);
+    float: right;
+  }
+
+}
