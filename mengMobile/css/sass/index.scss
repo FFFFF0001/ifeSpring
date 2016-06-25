@@ -37,7 +37,7 @@ $fontColor:#999A9D;
   }
   .pop-slider-wrap{
     position: relative;
-    height: pxToRem(250px);
+    height: pxToRem(260px);
     overflow: hidden;
   }
   .overflow{
@@ -45,11 +45,10 @@ $fontColor:#999A9D;
     left: 0;
     top: 0;
     width: 10000px;
-    overflow: auto;
   }
 }
 .pop-thgs{
-  box-shadow: 2px 1px 2px #FEF9F8;
+  box-shadow: 2px 4px 2px #FEF9F8;
   margin-left:pxToRem(10px);
   width: pxToRem(180px);
 
@@ -132,6 +131,7 @@ $fontColor:#999A9D;
 }
 .detail-ig{
   width: 100%;
+  height:pxToRem(95.3px);
 }
 .shop-desc {
   @include setFontColor();
