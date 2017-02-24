@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*定义变量*/
+body {
+  color: #333; }
+
+.rounded {
+  border-left-radius: 5px; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  nav ul li {
+    margin: 10px; }
+
+p {
+  border-color: red; }
+
+a:hover {
+  color: red; }
+
+/*# sourceMappingURL=8.css.map */

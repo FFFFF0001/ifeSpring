@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft YaHei';
+  text-decoration: none; }
+
+.swiper-slide a {
+  display: inline-block; }
+
+.swiper-slide img {
+  display: inline-block;
+  height: 12.5rem;
+  width: 100%; }
+
+#pop-wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  #pop-wrapper .pop-title {
+    font-size: 1.125rem;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #6B6B6C; }
+  #pop-wrapper .pop-slider-wrap {
+    position: relative;
+    height: 16.25rem;
+    overflow: hidden; }
+  #pop-wrapper .overflow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10000px; }
+
+.pop-thgs {
+  box-shadow: 2px 4px 2px #FEF9F8;
+  margin-left: 0.625rem;
+  width: 11.25rem;
+  float: left; }
+  .pop-thgs .thgs-pic {
+    padding-bottom: 0.3125rem; }
+  .pop-thgs .thgs-pic img {
+    display: inline-block;
+    width: 100%;
+    height: 8.125rem; }
+  .pop-thgs p.thgs-desc {
+    font-size: 0.9375rem;
+    padding: 0.3125rem 0 0.3125rem 0.9375rem;
+    color: #C7C7C7; }
+  .pop-thgs p.thgs-place {
+    padding: 0.3125rem 0 0.3125rem 0.9375rem;
+    font-size: 0.75rem;
+    color: #E7E7E7; }
+  .pop-thgs p.thgs-msg {
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 2.1875rem;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .pop-thgs p.thgs-msg .head-icon {
+      border-radius: 50%; }
+      .pop-thgs p.thgs-msg .head-icon img {
+        display: inline-block; }
+    .pop-thgs p.thgs-msg .name {
+      color: #999A9D;
+      font-size: 0.8125rem;
+      vertical-align: top;
+      display: inline-block; }
+    .pop-thgs p.thgs-msg .price {
+      float: right;
+      font-size: 1.375rem;
+      font-family: 'Arial';
+      color: #999A9D; }
+      .pop-thgs p.thgs-msg .price em {
+        font-style: normal;
+        font-size: 0.75rem; }
+
+.pop-more {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #999A9D;
+  font-size: 0.875rem; }
+
+.mid-show {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%; }
+
+#shop-container {
+  text-align: center; }
+
+#shop-container h3 {
+  font-size: 1.125rem;
+  font-weight: normal;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #999A9D;
+  text-align: center; }
+
+.shop-detail {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #EAEAEA;
+  width: 31%;
+  margin-left: 5px;
+  float: left; }
+
+.detail-ig {
+  width: 100%;
+  height: 5.95625rem; }
+
+.shop-desc {
+  color: #999A9D;
+  font-size: 0.625rem;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .shop-desc em {
+    font-style: normal;
+    color: #FFA9C2; }
+
+#shopping-cart {
+  clear: both;
+  display: inline-block;
+  color: #999A9D;
+  border: 1px solid #EAEAEA;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 40px 0; }
+  #shopping-cart em {
+    font-style: normal;
+    color: #000; }
+
+.some-goods-wrapper {
+  padding: 15px; }
+
+.goods img {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 15px; }
+
+.top-block {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box; }
+  .top-block .title {
+    font-size: 1.0625rem; }
+  .top-block .desc {
+    color: #999A9D;
+    padding-top: 15px;
+    font-size: 0.6875rem; }
+  .top-block .price {
+    font-size: 1.375rem;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .top-block .price em {
+      font-style: normal;
+      font-size: 0.75rem; }
+
+.bottom-block {
+  padding: 20px 10px; }
+  .bottom-block > div {
+    display: inline-block;
+    vertical-align: middle; }
+  .bottom-block .head-icon {
+    width: 3.125rem;
+    height: 3.125rem;
+    display: inline-block; }
+    .bottom-block .head-icon img {
+      width: 100%; }
+  .bottom-block .usrname {
+    color: #999A9D;
+    font-size: 0.875rem; }
+  .bottom-block .level, .bottom-block .year {
+    padding: 3px;
+    font-size: 0.6875rem;
+    border: 1px solid #efefef;
+    margin-right: 5px; }
+  .bottom-block .btn-book {
+    display: inline-block;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #F8869D;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    float: right; }
+
+/*# sourceMappingURL=index.css.map */

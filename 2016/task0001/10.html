@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox布局</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            align-items:center;
+        }
+        @media all and (max-width: 640px) {
+            #container{
+                align-items:flex-start;
+            }
+            .div3{
+                order:-1;
+            }
+        }
+        #container div {
+            margin: 20px;
+            width: 150px;
+            border:1px solid #f00;
+        }
+        .div0 {
+            height: 120px;
+        }
+        .div1 {
+            height: 100px;
+        }
+        .div2 {
+            height: 40px;
+        }
+        .div3 {
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="div0"></div>
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+    </div>
+</body>
+</html>

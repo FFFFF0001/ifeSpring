@@ -1,0 +1,43 @@
+*{margin:0;padding:0;list-style:none;font-family:'微软雅黑';}
+body,#wrapper,#left-wrap,#middle-content{
+	padding:20px;
+}
+#wrapper,#left-wrap,#middle-content,#right-wrap,#logo{
+	border:1px solid #999;
+}
+#wrapper{
+	overflow:auto;
+}
+#wrapper,#logo,.l-logo{
+	background:#eee;
+}
+#team-name{
+	margin-left: 120px;
+}
+#left-wrap{
+	width: 200px;
+	float:left;
+	background:#fff;
+}
+#middle-content{
+	/*float:right;*/
+	margin:0px 140px 0px 260px;
+	background: #fff;
+}
+#right-wrap{
+	width: 120px;
+	float:right;
+	background: #fff;
+}
+#logo{
+	width: 80px;
+	height: 80px;
+	float:left;
+}
+.l-logo{
+	border:1px solid #999;
+	text-align:center;
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+}

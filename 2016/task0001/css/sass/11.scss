@@ -1,0 +1,195 @@
+$baseFontSize:16px !default;
+@function pxToRem($px){
+  @return $px/$baseFontSize*1rem;
+}
+@mixin sVerticalPd($px:10px){
+  padding-top:pxToRem($px);
+  padding-bottom:pxToRem($px);
+}
+@mixin sHorizonPd($px:10px){
+  padding-left:pxToRem($px);
+  padding-right:pxToRem($px);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+header{
+  padding:pxToRem(10px) 0;
+  background-color: #91D4DA;
+  color:#fff;
+  text-align: center;
+  font-size:pxToRem(20px);
+  position: relative;
+  .h-back {
+    position: absolute;
+    font-size: pxToRem(15px);
+    left:pxToRem(10px);
+    top:pxToRem(13px);
+  }
+}
+nav ul>li.each-n {
+  display: inline-block;
+  height: pxToRem(41px);
+  vertical-align: middle;
+  width: 20%;
+  text-align: center;
+  font-size: pxToRem(17px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding:pxToRem(10px) 0;
+  color:#676767;
+}
+nav ul>li.each-n:nth-child(2){
+  border-bottom:3px solid #91D4DA;
+}
+.carousel img{
+  width:100%;
+}
+#mid-label {
+  padding: pxToRem(10px);
+  border-bottom:2px solid #DEDEDE;
+}
+.wrap-label {
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+  span.img-bg {
+    display: inline-block;
+    background-color: #00C7D6;
+    border-radius:50%;
+    padding: 10px;
+  }
+  .desc {
+    font-size: pxToRem(13px);
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+#break-column {
+  padding: pxToRem(10px);
+  .img-wrap{
+    height: 100px;
+    img{
+      vertical-align: middle;
+    }
+  }
+  dl{
+    box-sizing: border-box;
+    text-align: center;
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  dl:not(:nth-child(1)) {
+    border-left:2px solid #DEDEDE;
+  }
+  .d-title {
+    font-weight: bold;
+    font-size: pxToRem(15px);
+    margin-top:10px;
+    @include sVerticalPd(5px);
+  }
+  .d-desc {
+    font-size: pxToRem(13px);
+    color: #5c5c5c;
+  }
+}
+.modules>h3 {
+  @include sVerticalPd(10px);
+
+  border-bottom: 2px solid #DEDEDE;
+}
+.modules{
+  padding: 10px;
+  .module-wrap{
+    margin-top: 10px;
+  }
+  .module-wrap>div{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .module-left
+  {
+    width: 30%;
+    img {
+      display: inline-block;
+      height: pxToRem(80px);
+    }
+  }
+
+  .module-right{
+    width: 70%;
+    .wenan {
+      box-sizing: border-box;
+      background-color: #F8F8F8;
+      text-align: center;
+      float: right;
+      font-size: pxToRem(13px);
+      height: pxToRem(38px);
+      width: 45%;
+      margin-top: 5px;
+      margin-left:5px;
+      line-height: pxToRem(38px);
+      padding:pxToRem(3px);
+    }
+  }
+}
+#vertical-art {
+  padding: pxToRem(10px);
+  .each-art {
+    @include sVerticalPd(10px);
+    border-bottom: 2px solid #DEDEDE;
+  }
+  .art-img{
+    display: inline-block;
+    vertical-align: middle;
+    clear: both;
+    width: 30%;
+    img{
+      display: inline-block;
+      width: 100%;
+      height: pxToRem(70px);
+    }
+  }
+  .art-detail{
+    color: #646464;
+    float: right;
+    width: 68%;
+    height: pxToRem(70px);
+    position: relative;
+    font-size: pxToRem(15px);
+    .art-create{
+      color: #C3C3C3;
+      font-size: pxToRem(12px);
+      position: absolute;
+      left:0px;
+      bottom:0px;
+    }
+  }
+}
+#horizon-art {
+  @include sHorizonPd();
+
+  .art-title {
+    font-size: pxToRem(15px);
+    @include sVerticalPd(10px);
+    color: #646464;
+  }
+  .img-group > img {
+    display: inline-block;
+    float: left;
+    width: 32%;
+    margin-left: 2px;
+  }
+  .art-create {
+    clear: both;
+    margin-top: pxToRem(80px);
+    color: #C3C3C3;
+    font-size: pxToRem(13px);
+  }
+}

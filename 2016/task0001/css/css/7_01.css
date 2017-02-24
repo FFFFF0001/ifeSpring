@@ -1,0 +1,245 @@
+@charset "UTF-8";
+body {
+  width: 1280px;
+  margin: 0 auto;
+  font-family: '微软雅黑'; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+nav {
+  height: 53px;
+  line-height: 53px;
+  padding-left: 50px;
+  font-size: 21px;
+  color: #393a3a; }
+  nav img.logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 31px;
+    height: 31px;
+    margin-right: 11px; }
+  nav ul.nav_detail {
+    margin-left: 550px;
+    display: inline-block;
+    font-size: 0; }
+    nav ul.nav_detail li {
+      width: 65px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle; }
+      nav ul.nav_detail li a {
+        font-size: 14px;
+        color: #787b83;
+        text-decoration: none; }
+    nav ul.nav_detail li.active a {
+      color: #e8504e; }
+  nav span.login-wrap {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 14px;
+    color: #e8504e; }
+    nav span.login-wrap img.login_icon {
+      display: inline-block;
+      width: 14px;
+      height: 17px; }
+
+.banner {
+  height: 688px;
+  overflow: auto;
+  background: url("../../img/task7/pic01.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover; }
+  .banner .content-sub {
+    margin-top: 230px;
+    margin-left: 117px;
+    color: #ffffff; }
+    .banner .content-sub .title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 32px; }
+    .banner .content-sub .desc {
+      font-size: 21px;
+      line-height: 25px;
+      margin-bottom: 66px; }
+    .banner .content-sub a {
+      display: block;
+      width: 333px;
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+      text-indent: 3px;
+      letter-spacing: 3px;
+      background: #e8504e;
+      font-size: 30px;
+      color: #ffffff; }
+
+.list-feature {
+  padding-top: 45px;
+  padding-bottom: 66px; }
+  .list-feature ul {
+    font-size: 0; }
+    .list-feature ul li {
+      width: 25%;
+      display: inline-block;
+      vertical-align: middle; }
+      .list-feature ul li img.feature-icon {
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin: 0 auto; }
+      .list-feature ul li p {
+        width: 154px;
+        margin: 46px auto 0;
+        font-size: 14px;
+        padding: 0 80px 15px 85px;
+        color: #767777;
+        text-align: center; }
+    .list-feature ul li:not(:last-of-type) p {
+      border-right: 1px solid #aaa; }
+
+.about-nw {
+  padding-top: 89px;
+  padding-bottom: 79px;
+  background: #ededec; }
+  .about-nw .logo {
+    display: block;
+    width: 91px;
+    height: 92px;
+    margin: 0 auto 48px; }
+  .about-nw p {
+    font-size: 53px;
+    color: #867e7a;
+    text-align: center; }
+
+.linear {
+  width: 31px;
+  height: 3px; }
+
+.white-l {
+  background: #ffffff; }
+
+.search-form {
+  padding-top: 53px;
+  padding-bottom: 132px;
+  background: url("../../img/task7/2.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center; }
+  .search-form p.title {
+    font-size: 21px; }
+  .search-form p.linear {
+    margin: 10px auto 0; }
+  .search-form p.desc {
+    font-size: 12px;
+    margin-top: 19px; }
+  .search-form ul.input-list {
+    margin-top: 52px;
+    margin-left: 125px;
+    font-size: 0; }
+    .search-form ul.input-list > li {
+      list-style: none;
+      font-size: 12px;
+      width: 236px;
+      text-align: left;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 30px;
+      position: relative; }
+      .search-form ul.input-list > li input.ip_text {
+        padding-left: 12px;
+        width: 224px;
+        height: 36px;
+        line-height: 36px;
+        border: 0;
+        outline: none; }
+      .search-form ul.input-list > li .ip_btn {
+        padding-left: 0;
+        background: #be4e48;
+        font-size: 14px;
+        color: #ffffff;
+        text-indent: 26px;
+        letter-spacing: 26px; }
+      .search-form ul.input-list > li s {
+        display: inline-block;
+        width: 13px;
+        height: 7px;
+        position: absolute;
+        top: 10px;
+        right: 8px; }
+        .search-form ul.input-list > li s img {
+          display: block; }
+      .search-form ul.input-list > li ul.select-hidden {
+        position: absolute;
+        width: 236px;
+        left: 0;
+        top: 36px;
+        background: #e4e3e5;
+        font-size: 12px;
+        color: #605957; }
+        .search-form ul.input-list > li ul.select-hidden li.hidden-opt:last-of-type {
+          margin-bottom: 20px; }
+        .search-form ul.input-list > li ul.select-hidden li.hidden-opt {
+          position: relative;
+          padding-left: 30px;
+          height: 25px;
+          line-height: 25px;
+          -webkit-transition: all .3s ease;
+          transition: all .3s ease; }
+          .search-form ul.input-list > li ul.select-hidden li.hidden-opt i.gou {
+            background: url("../../img/task7/icon-8.png");
+            background-size: cover;
+            display: none;
+            width: 13px;
+            height: 8px;
+            position: absolute;
+            z-index: 999;
+            left: 5px;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            -moz-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            -o-transform: translate(0, -50%);
+            transform: translate(0, -50%); }
+          .search-form ul.input-list > li ul.select-hidden li.hidden-opt:hover {
+            background: #be4e48;
+            color: #ffffff; }
+          .search-form ul.input-list > li ul.select-hidden li.hidden-opt:hover i.gou {
+            display: block; }
+
+.activitys {
+  background: #f7f7f7;
+  padding-top: 94px;
+  padding-bottom: 114px;
+  font-size: 0; }
+  .activitys dl.activity_item:first-of-type {
+    margin-left: 148px; }
+  .activitys dl.activity_item {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-right: 35px; }
+    .activitys dl.activity_item dt.cover {
+      width: 219px;
+      height: 337px; }
+      .activitys dl.activity_item dt.cover img {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    .activitys dl.activity_item dd.item-title {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px; }
+    .activitys dl.activity_item:nth-of-type(2) dd.item-title {
+      margin-top: 0;
+      font-size: 17px;
+      letter-spacing: 30px;
+      text-indent: 30px; }
+    .activitys dl.activity_item dd.desc {
+      font-size: 12px;
+      margin-top: 10px;
+      text-align: center; }
+
+/*# sourceMappingURL=7_01.css.map */
