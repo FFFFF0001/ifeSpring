@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Vue的源码学习--如何监听一个对象的变化</h1>
+<p>https://github.com/youngwind/blog/issues/84</p>
+
+<script>
+    function Observer(data) {
+        this.data = data;
+        this.walk(data);
+    }
+
+    Observer.prototype = {
+        constructor: Observer,
+
+        _isObject: function (obj) {
+            return Object.prototype.toString.call(obj) === '[object Object]';
+        },
+
+        walk: function (data) {
+            // ignore while is not Object
+            if (!this._isObject(data)) return false;
+
+            for (var attr in data) {
+                if (data.hasOwnProperty(attr)) {
+
+                    var value = data[attr];
+                    if (this._isObject(value)) {
+                        new Observer(value);
+                    }
+
+                    this.convert(attr, value);
+
+                }
+
+            }
+
+        },
+
+        convert: function (key, val) {
+            Object.defineProperty(this.data, key, {
+                configurable: true,
+                enumerable: true,
+                get: function () {
+                    console.log(key + " be getting");
+                    return val;
+                },
+                set: function (newValue) {
+                    console.log(key + " be updating to " + newValue);
+                    if (newValue === val) return;
+                    val = newValue;
+                }
+            })
+        }
+    }
+
+    var data = {
+        user: {
+            name: "frehaiku",
+            age: "21"
+        },
+        address: {
+            city: "GuangZhou"
+        },
+        whatLike: 'frontend'
+    };
+    var observer1 = new Observer(data);
+
+    console.log(observer1);
+</script>
+</body>
+</html>
