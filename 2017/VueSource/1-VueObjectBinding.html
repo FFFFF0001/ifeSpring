@@ -45,6 +45,7 @@
         },
 
         convert: function (key, val) {
+            var self = this;
             Object.defineProperty(this.data, key, {
                 configurable: true,
                 enumerable: true,
@@ -56,6 +57,11 @@
                     console.log(key + " be updating to " + newValue);
                     if (newValue === val) return;
                     val = newValue;
+
+                    // fix reset with a Object,getter and setter cease's question
+                    if (self._isObject(newValue)) {
+                        new Observer(val)
+                    }
                 }
             })
         }
